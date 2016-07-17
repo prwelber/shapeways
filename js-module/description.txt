@@ -1,0 +1,3 @@
+JS-Module
+
+My approach to creating this module was simple and straightforward. I used a quick and dirty json server to store the user object as json, and I decided that no libraries were needed. The approach was to use input boxes for the user information, and a click event on the submit button to initiative the POST to the server. I had only used AJAX through jQuery prior to this, so I thought it would be a good opportunity to take a quick tour of doing a 'vanilla' XMLHttpRequest. Plus, there was no need to include jQuery for pulling the user input off of the DOM. 

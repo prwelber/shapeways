@@ -1,0 +1,3 @@
+SASS Description
+
+My approach to this was to create a div ('box') that would hold the entire contact module, and then create a div ('holder') inside of that, that would contain two more divs ('avatar', 'details'), the avatar and the identifying information. Within the 'details' div, I created a div for each piece of user info, so that I could more easily handle the <i> tag. 

@@ -24,6 +24,7 @@ var clickImage = function clickImage () {
   appendButton();
   var avatar = document.getElementsByClassName('avatar')[0];
   var check = document.getElementById('input-avatar');
+  // if the avatar input box doesn't exist
   if (check === null) {
     var input = document.createElement('input');
     input.placeholder = 'paste url and press enter';
@@ -32,6 +33,7 @@ var clickImage = function clickImage () {
     document.body.appendChild(input);
     input.addEventListener('keydown', function(event) {
       if (event.keyCode === 13) {
+        // if enter key is pressed, change avatar div background image
         avatar.style.backgroundImage = "url("+input.value+")";
       }
     });
@@ -43,7 +45,8 @@ var submitChanges = function submitChanges () {
   var email = document.getElementById('contact').textContent;
   var follow = document.getElementById('follow').textContent;
   var twitter = document.getElementById('twitter').textContent;
-  var avatar = document.getElementById('input-avatar')
+  var avatar = document.getElementById('input-avatar');
+  // ternary says if avatar is null (doesn't exist), use placeholder image
   avatar === null ? avatar = 'http://www.sut.org/wp-content/uploads/2014/06/avatar_placeholder.svg' : avatar = avatar.value;
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -59,7 +62,7 @@ var submitChanges = function submitChanges () {
     twitter: twitter,
     avatar: avatar
   }
-  user = JSON.stringify(user);
+  user = JSON.stringify(user); // convert user object to JSON to send to server
   var url = 'http://localhost:3000/users';
   console.log('user', user);
   sendData(user, url);
@@ -84,9 +87,6 @@ var addEventToActions = function addEventToActions (elements) {
     elements[i].addEventListener('click', function(event) {
       appendButton();
     });
-    elements[i].addEventListener('blur', function(event) {
-      console.log('blurred');
-    });
   }
 }
 
@@ -97,12 +97,8 @@ var changeAvatar = function changeAvatar () {
   });
 }
 
+// invoke functions
 clickUsername(username);
 addEventToActions(actions);
 changeAvatar();
-
-
-// actions.addEventListener('click', function (event) {
-//   console.log(event.target)
-// });
 

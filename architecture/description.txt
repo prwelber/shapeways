@@ -1,0 +1,5 @@
+Architecture
+
+To persist the user information on a server, you could send the information either via a form and a POST request, or you could use an AJAX call, as I did here. The server would be responsible for receiving the request, processing it (updating user data or creating a new user), and sending back a success or failure response. The client would be responsible for validating the information before it is sent to the server, and would update when a success/failure response is received. You could also have some commonly requested user info cached (email or usernames) and you could check for an already existing username, for example, before making the server call.
+
+To blend this functionality into an existing site that uses inline styling and inline scripts, you would have to be extremely careful with the styles since the inline styling will overwrite anything on a stylesheet. 
