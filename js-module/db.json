@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user": "phil",
+      "email": "prwelber@gmail.com",
+      "avatar": "www.google.com"
+    }
+  ]
+}

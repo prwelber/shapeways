@@ -1,0 +1,42 @@
+html, body {
+  margin: 1em 0 0 1em;
+  padding: 0px; }
+
+.box {
+  height: 200px;
+  width: 500px;
+  border: 1px solid #D3D3D3;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .box #submit-user-changes {
+    position: relative;
+    top: 45%;
+    left: 5%;
+    border-radius: 15px; }
+  .box .holder {
+    width: 80%;
+    height: 80%;
+    display: flex; }
+    .box .holder .avatar {
+      height: 100%;
+      width: 40%;
+      border: 1px solid #D3D3D3;
+      border-radius: 15px;
+      background-image: url("http://www.sut.org/wp-content/uploads/2014/06/avatar_placeholder.svg");
+      background-size: cover; }
+    .box .holder .details {
+      margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .box .holder .details .username {
+        color: #ADD8E6;
+        margin: 0; }
+      .box .holder .details .actions {
+        font-size: 1.5em; }
+        .box .holder .details .actions span {
+          margin-left: 10px; }
+
+/*# sourceMappingURL=styles.css.map */

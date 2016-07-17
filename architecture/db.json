@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "phil",
+      "email": "prwelber@gmail.com",
+      "follow": "true",
+      "twitter": "@prwelber",
+      "avatar": "www.google.com"
+    }
+  ]
+}
